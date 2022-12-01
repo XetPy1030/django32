@@ -1,0 +1,112 @@
+{% load static %}
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__item">
+        <a class="logo" href="">
+          <img src="{% static 'лого.jpg' %}" alt="" />
+        </a>
+        <div class="header__social social">
+          <ul>
+            <li>
+              <a href="" target="_blank">
+                <img src="{% static 'brand-google.png' %}" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="" target="_blank">
+                <img src="{% static 'brand-instagram.png' %}" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="" target="_blank">
+                <img src="{% static 'brand-invision.png' %}" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__menu">
+          <ul>
+            <li id="menu-item-11"
+              class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-11">
+              <a href="" aria-current="page">О нас</a>
+            </li>
+            <li id="menu-item-12"
+              class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-12">
+              <a href="" aria-current="page">Услуги</a>
+            </li>
+            <li id="menu-item-13"
+              class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-13">
+              <a href="" aria-current="page">Специалисты</a>
+            </li>
+            <li id="menu-item-14"
+              class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-14">
+              <a href="" aria-current="page">Пациентам</a>
+            </li>
+            <li id="menu-item-16"
+              class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-16">
+              <a href="" aria-current="page">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__info">
+          <ul>
+            <li>
+              <img src="{% static 'location_outline.svg' %}" alt="" />
+              <span>Чебоксары,<br />
+                Энтузиастов 1А
+              </span>
+            </li>
+            <li>
+              <img src="{% static 'calendar.svg' %}" alt="" />
+              <p>с 09:00 - 20:00</p>
+              <span>пн-сб </span>
+            </li>
+            <li>
+              <img src="{% static 'phone.svg' %}" alt="" />
+              <a href="tel:+7 8352 60 90 02">+7900 333 10 40</a>
+            </li>
+          </ul>
+        </div>
+        <button class="header__btn btn open_modal" data-val="modal_1">
+          Заказать звонок
+        </button>
+      </div>
+      <div class="header__mob">
+        <a class="logo" href="">
+          <img src="{% static 'лого.jpg' %}" alt="" />
+        </a>
+        <div id="device" class="device">
+          <div class="container-mob">
+            <button id="burger" class="open-main-nav">
+              <span class="burger"></span>
+              <span class="burger-text">Меню</span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+              <ul>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-11">
+                  <a href="" aria-current="page">О нас</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-12">
+                  <a href="" aria-current="page">Услуги</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-13">
+                  <a href="" aria-current="page">Специалисты</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-14">
+                  <a href="" aria-current="page">Пациентам</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-16">
+                  <a href="" aria-current="page">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

@@ -1,0 +1,31 @@
+<section class="onlinColl" id="coll">
+    <div class="container">
+      <div class="onlinColl__box">
+        <div class="onlinColl__item">
+          <div class="onlinColl__title title">
+            {{ text1 }}
+          </div>
+          <div class="onlinColl__subtitle">
+            Укажите свой номер телефона, мы перезвоним и подберем для вас
+            удобное время для консультации. Или позвоните нам сами —
+            <a href="">+7 8352 60 90 02</a>
+          </div>
+          <form class="onlinColl__form form-send">
+            <input type="hidden" name="admin_email" value="" />
+            <input type="hidden" name="subject" value="" />
+            <input class="onlinColl__inp" type="number" placeholder="Телефон" name="phone" />
+            <button class="onlinColl__btn btn">Записаться на прием</button>
+          </form>
+          <div class="onlinColl__police">
+            Записываясь на услугу вы даёте согласие на
+            <a href="#">обработку своих персональных данных</a>
+          </div>
+        </div>
+        <div class="onlinColl__img">
+          <div class="onlinColl__girl onlinColl__girl-top">
+            <img src="{{ link }}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

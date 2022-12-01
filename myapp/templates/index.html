@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+    <title>Django lesson 3 task 2</title>
+  </head>
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <section class="banner" style="
+        background-image: url('/static/nurse-posing-against-background-dentist-who-treats-girl\ 1.png');
+      ">
+    <div class="container">
+      <div class="banner__item">
+        <div class="banner__toptitle">— Стоматология в Чебоксарах</div>
+        <div class="banner__title title">
+          Лечение зубов <br />
+          в тот же день
+        </div>
+        <div class="banner__subtitle">
+          Мы проведем полную консультацию,<br />
+          профессиональную гигиену полости рта,<br />
+          лечение зубов и десен
+        </div>
+        <a class="banner__btn btn" href="#coll">Записаться на приём</a>
+      </div>
+      <div class="banner__bottom">
+        <div class="banner__bottom-item">
+          <div class="img">
+            <img src="{% static 'Group.png' %}" alt="">
+          </div>
+          <p>Команда квалифицированных специалистов</p>
+        </div>
+        <div class="banner__bottom-item">
+          <div class="img">
+            <img src="{% static 'Vector.png' %}" alt="">
+          </div>
+          <p>3 стоматологических <br> кабинета</p>
+        </div>
+        <div class="banner__bottom-item">
+          <div class="img">
+            <img src="{% static 'Group1.png' %}" alt="">
+          </div>
+          <p>Удобное <br> расположение</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services__title title">Услуги</div>
+      <div class="services__subtitle subtitle">
+        Мы постарались сделать прайс, максимально простым и понятным.
+      </div>
+      <div class="services__block">
+        {% include 'components/card.html' with link1='static/Group-22.svg' link2='static/Group-22-1.svg' title='Лечение зубов' %}
+
+        {% include 'components/card.html' with link1='static/Group-23.svg' link2='static/Group-23-1.svg' title='Гигиена' %}
+
+        {% include 'components/card.html' with link1='static/Group-24.svg' link2='static/Group-24-1.svg' title='Брекеты' %}
+
+        {% include 'components/card.html' with link1='static/Group-25.svg' link2='static/Group-25-1.svg' title='Детская стоматология' %}
+
+        {% include 'components/card.html' with link1='static/Group-31.svg' link2='static/Group-31-1.svg' title='Имплантация' %}
+
+        {% include 'components/card.html' with link1='static/Group-46.svg' link2='static/Group-46-1.svg' title='Виниры' %}
+
+        {% include 'components/card.html' with link1='static/Group-26.svg' link2='static/Group-26-1.svg' title='Коронки' %}
+
+        {% include 'components/card.html' with link1='static/Group-29.svg' link2='static/Group-29-1.svg' title='Хирургия' %}
+
+        <style>
+          .servicesItem {
+            width: 20%;
+          }
+        </style>
+      </div>
+    </div>
+  </section>
+
+  <section class="NamDoveryayut">
+    <div class="container">
+      <h2 class="title">Нам доверяют пациенты</h2>
+      <div class="dovers">
+        {% include 'components/dovers.html' with num='1' title='Честные цены, без хитрых уловок' description='Фиксируем цены в плане лечения, не повышаем в процессе.' %}
+
+        {% include 'components/dovers.html' with num='2' title='Опытные Врачи' description='Врачи постоянно совершенствуются в своей специальности, несмотря на богатый опыт работы.' %}
+
+        {% include 'components/dovers.html' with num='3' title='Комфортные условия' description='Уютная обстановка и отзывчивый персонал сделают поход к стоматологу максимально приятным.' %}
+      </div>
+    </div>
+  </section>
+
+  {% include 'form.html' with text1="При фиксации брекетов на обе челюсти получи сертификат на 7000 рублей" link="static/call1.png" %}
+
+  <section class="treatment" id="treatment">
+    <div class="container">
+      <div class="treatment__title title">Лечение у нас</div>
+      <div class="treatment__subtitle subtitle">
+        Просто и безболезненно, с предоставлением <br />
+        всего спектра стоматологических услуг
+      </div>
+      <div class="treatment__box">
+        <div class="treatment__info">
+          <a class="treatment__logo logo" href="">
+            <img src="{% static 'лого.jpg' %}" alt="" />
+            клиника
+          </a>
+          <div class="treatment__texttop">
+            предоставляет весь спектр <br> стоматологических услуг таких как
+          </div>
+          <div class="treatment__tegs">
+            <ul>
+              <li>Терапия</li>
+              <li>Хирургия</li>
+              <li>Хирургия</li>
+              <li>Детская стоматология</li>
+              <li>Ортопедия</li>
+            </ul>
+          </div>
+          <div class="treatment__textbottom">
+            Приоритетным направлением является восстановление <br />
+            функциональных возможностей зубочелюстной системы и <br />
+            профилактика заболевания полости рта.
+          </div>
+          <div class="treatment__logos">
+            <a href="javascript:;">
+              <img src="{% static '2-1.png' %}" alt="" />
+            </a>
+            <a href="javascript:;">
+              <img src="{% static '320x0w-1.png' %}" alt="" />
+            </a>
+            <a href="javascript:;">
+              <img src="{% static 'logos3.jpg' %}" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="treatment__slider">
+          <div class="img">
+            <img src="{% static 'portrait-dentist-taking-selfie-with-patient 2.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="specialists" id="specialists">
+    <div class="container">
+      <div class="specialists_title title">Специалисты</div>
+      <div class="specialists_subtitle subtitle">
+        Просто и безболезненно, с предоставлением всего спектра
+        стоматологических услуг
+      </div>
+      <div class="specialists__blocks">
+        {% include 'components/specialist.html' with name="Шац Дарья Сергеевна" description="Директор, Главный врач , Врач ортодонт<br /> Стаж работы 11 лет<br />" link="static/beautiful-young-woman-doctor-posing-white-medical-gown_1-removebg 2.png" %}
+
+        {% include 'components/specialist.html' with name='Оленина Марина Николаевна' description='Зам директора, Врач стоматолог терапевт<br /> Стаж работы более 25 лет <br />' link='static/beautiful-young-woman-doctor-posing-white-medical-gown_1-removebg 2.png' %}
+
+        {% include 'components/specialist.html' with name='Медведев Дмитрий Николаевич' description='Врач стоматолог хирург<br /> Стаж работы более 7 лет<br />' link='static/dentist-man-holding-tools-isolated-white-wall-laughing 2.png' %}
+
+        {% include 'components/specialist.html' with name='Терушкина Елена Дмитриевна' description='Врач стоматолог детский<br /> Стаж работы более 7 лет <br />' link='static/dentist-man-holding-tools-isolated-white-wall-laughing 2.png' %}
+
+        {% include 'components/specialist.html' with name='Львова Марина Сергеевна' description='Медицинская сестра' link='static/dentist-man-holding-tools-isolated-white-wall-laughing 2.png' %}
+
+      </div>
+    </div>
+  </section>
+
+  <section class="certifications">
+    <div class="container">
+      <h2 class="certifications__title">Сертификаты, награды и дипломы</h2>
+      <div class="certifications__list">
+        <div class="img"><img src="{% static '13252040621aca4547cf2323c2b774ce2f89eb 1.png' %}" alt=""></div>
+        <div class="img"><img src="{% static '13252040621aca4547cf2323c2b774ce2f89eb 1.png' %}" alt=""></div>
+        <div class="img"><img src="{% static '13252040621aca4547cf2323c2b774ce2f89eb 1.png' %}" alt=""></div>
+        <img src="{% static 'arrow-chevron_big_left.png' %}" alt="" class="certifications__left certifications__arrow">
+        <img src="{% static 'arrow-chevron_big_left.png' %}" alt="" class="certifications__right certifications__arrow">
+      </div>
+    </div>
+  </section>
+
+  {% include 'form.html' with text1="Онлайн консультация специалиста <br /> по аудио и видео связи, Бесплатно.<br />" link="static/call2.png" %}
+
+  {% include 'footer.html' %}
+</body>
+
+</html>
